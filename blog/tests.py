@@ -86,7 +86,7 @@ class AboutPageGetTests(SimpleTestCase):
         self.assertNotContains(self.response, '<a href="/about/">О нас</a>', html=True)
 
     def test_content_text(self):
-        self.assertContains(self.response, 'Телефон: +12345677890')
+        self.assertContains(self.response, 'Телефон: +1234567890')
         self.assertContains(self.response, 'Email: admin@admin.com')
         self.assertContains(self.response, f'&copy; mysite.com 2023-{timezone.now().year}. All rights reserved.')
 
